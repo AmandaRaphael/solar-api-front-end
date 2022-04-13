@@ -1,0 +1,23 @@
+.navBar {
+  display: flex;
+  justify-content:space-around;
+  gap: 3px;
+}
+
+.selected{
+  font-size: 30px;
+  color:rgb(3, 194, 134)
+}
+.unSelected{
+color:white;
+ text-decoration:none ;
+}
+
+@media only screen and (min-width:320px) and (max-width:675px) {
+  .selected{
+    font-size: 20px;
+  }
+  .unSelected{
+font-size: 15px;
+}
+}
