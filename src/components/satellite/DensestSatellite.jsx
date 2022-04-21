@@ -6,6 +6,7 @@ import style from "./satellite.module.css";
 const DensestSatellite = () => {
   const [densestSatelliteStatus, setDensestSatelliteStatus] = useState("");
   const [showButton, setShowButton] = useState(true);
+
   const fetchSatellitedensity = async () => {
     setDensestSatelliteStatus("");
     setShowButton(true);
@@ -19,6 +20,7 @@ const DensestSatellite = () => {
       console.log(error);
     }
   };
+  
   return (
     <div>
       <p> Do you know which is the densest satellites?</p>

@@ -13,8 +13,8 @@ const LeastDenseSatellite = () => {
        const result = await axios
          .get(`${process.env.REACT_APP_SERVER}/satellite/density?pick=lowest`)
          .then((res) => {
-           console.log("result", res.data);
-           setleastDensestSatelliteStatus(res.data);
+           
+           setleastDensestSatelliteStatus(result.data);
            setShowButton(false);
          });
      };

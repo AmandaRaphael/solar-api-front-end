@@ -20,6 +20,7 @@ const SmallestPlanet = () => {
       console.log(error);
     }
   };
+  
   return (
     <div>
       <p> Do you know which is the smallest planet? </p>
