@@ -12,7 +12,7 @@ const ShortestDay = () => {
    setShowButton(true);
    try {
       const result = await axios.get(
-        "http://localhost:3001/planets/day/shortest"
+        `${process.env.REACT_APP_SERVER}/planets/day/shortest`
       );
      setshortestDayStatus(result.data);
      setShowButton(false);

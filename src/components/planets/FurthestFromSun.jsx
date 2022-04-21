@@ -14,7 +14,7 @@ const FurthestFromSun = () => {
             setfurthestToSunStatus("");
             setShowButton(true);
       const result = await axios.get(
-        "http://localhost:3001/planets/sun/furthest"
+        `${process.env.REACT_APP_SERVER}/planets/sun/furthest`
       );
       setfurthestToSunStatus(result.data);
       setShowButton(false);

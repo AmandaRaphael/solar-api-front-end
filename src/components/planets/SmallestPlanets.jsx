@@ -11,7 +11,7 @@ const SmallestPlanet = () => {
     setShowButton(true);
     try {
       const result = await axios.get(
-        "http://localhost:3001/planets/size/smallest"
+        `${process.env.REACT_APP_SERVER}/planets/size/smallest`
       );
       console.log("result", result.data);
       setSmallestPlanetStatus(result.data);

@@ -1,8 +1,8 @@
-
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Satellites from "./components/satellite/Satellites.js";
 import Planets from "./components/planets/Planets";
 import Homepage from "./pages/Homepage/Homepage.jsx";
+
 function App() {
   return (
     <BrowserRouter>
@@ -13,7 +13,6 @@ function App() {
         </Route>
       </Routes>
     </BrowserRouter>
- 
   );
 }
 

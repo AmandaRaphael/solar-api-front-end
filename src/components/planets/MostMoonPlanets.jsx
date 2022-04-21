@@ -10,7 +10,9 @@ const MostMoonPlanets = () => {
          setmostMoonStatus("");
          setShowButton(true);
       try {
-          const result = await axios.get("http://localhost:3001/planets/moons/most");
+          const result = await axios.get(
+            `${process.env.REACT_APP_SERVER}/planets/moons/most`
+          );
              setmostMoonStatus(result.data);
              setShowButton(false);
       } catch (error) {

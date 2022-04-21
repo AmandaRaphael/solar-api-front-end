@@ -12,7 +12,7 @@ const CoolestPlanet = () => {
    setShowButton(true);
    try {
      const result = await axios.get(
-       "http://localhost:3001/planets/temperature/coldest"
+       `${process.env.REACT_APP_SERVER}/planets/temperature/coldest`
      );
      setcoolestPlanetStatus(result.data);
      setShowButton(false);

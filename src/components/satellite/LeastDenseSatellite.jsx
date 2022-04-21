@@ -11,11 +11,11 @@ const LeastDenseSatellite = () => {
         setleastDensestSatelliteStatus("")
         setShowButton(true)
        const result = await axios
-         .get("http://localhost:3001/satellite/density?pick=lowest")
+         .get(`${process.env.REACT_APP_SERVER}/satellite/density?pick=lowest`)
          .then((res) => {
            console.log("result", res.data);
-             setleastDensestSatelliteStatus(res.data);
-             setShowButton(false)
+           setleastDensestSatelliteStatus(res.data);
+           setShowButton(false);
          });
      };
     return (

@@ -12,8 +12,8 @@ const ClosestToSun = () => {
            setShowButton(true);
         try {
                 const result = await axios.get(
-        "http://localhost:3001/planets/sun/closest"
-      );
+                  `${process.env.REACT_APP_SERVER}/planets/sun/closest`
+                );
      
      setclosestToSunStatus(result.data);
      setShowButton(false);

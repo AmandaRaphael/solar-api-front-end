@@ -12,7 +12,7 @@ const LeastMoonPlanets = () => {
     setShowButton(true);
     try {
       const result = await axios.get(
-        "http://localhost:3001/planets/moons/none"
+        `${process.env.REACT_APP_SERVER}/planets/moons/none`
       );
       console.log("result", result.data);
       setleastMoonStatus(result.data);

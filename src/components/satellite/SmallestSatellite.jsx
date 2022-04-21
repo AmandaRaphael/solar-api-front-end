@@ -2,6 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import Button from "../Button/Button.jsx";
 import style from "./satellite.module.css";
+
 const SmallestSatellite = () => {
   const [smallestSatelliteStatus, setSmallestSatelliteStatus] = useState("");
   const [showButton, setShowButton] = useState(true);
@@ -11,7 +12,7 @@ const SmallestSatellite = () => {
     setShowButton(true);
     try {
       const result = await axios.get(
-        "http://localhost:3001/satellite/size?pick=smallest"
+        `${process.env.REACT_APP_SERVER}/satellite/size?pick=smallest`
       );
       setSmallestSatelliteStatus(result.data);
       setShowButton(false);

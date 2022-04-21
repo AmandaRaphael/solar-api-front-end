@@ -13,7 +13,7 @@ const LargestSatellite = () => {
     setShowButton(true)
     try {
       const result = await axios.get(
-        "http://localhost:3001/satellite/size?pick=largest"
+        `${process.env.REACT_APP_SERVER}/satellite/size?pick=largest`
       );
       setLargestSatelliteStatus(result.data);
       setShowButton(false)

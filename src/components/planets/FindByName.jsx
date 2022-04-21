@@ -13,7 +13,7 @@ const FindByName = () => {
       
          try {
              const result = await axios.get(
-         `http://localhost:3001/planets/find/${inputValue}`
+         `${process.env.REACT_APP_SERVER}/planets/find/${inputValue}`
        );
           
            setSearchResult(result.data);

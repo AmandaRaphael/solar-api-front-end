@@ -12,8 +12,8 @@ const HottestPlanet = () => {
           setShowButton(true);
            try {
                 const result = await axios.get(
-           "http://localhost:3001/planets/temperature/hottest"
-         );
+                  `${process.env.REACT_APP_SERVER}/planets/temperature/hottest`
+                );
           sethottestPlanetStatus(result.data);
           setShowButton(false);
     

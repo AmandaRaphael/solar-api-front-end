@@ -11,7 +11,7 @@ const LargestPlanet = () => {
     setShowButton(true);
     try {
       const result = await axios.get(
-        "http://localhost:3001/planets/size/largest"
+        `${process.env.REACT_APP_SERVER}/planets/size/largest`
       );
       console.log("result", result.data);
       setLargestPlanetStatus(result.data)

@@ -3,6 +3,7 @@ import axios from "axios";
 import Button from "../Button/Button.jsx";
 import style from "./satellite.module.css";
 
+
 const SearchByName = () => {
   const [inputValue, setInputValue] = useState("");
   const [searchResult, setSearchResult] = useState("");
@@ -14,7 +15,7 @@ const SearchByName = () => {
    
     try {
       const result = await axios.get(
-        `http://localhost:3001/satellite/find/${inputValue}`
+        `${process.env.REACT_APP_SERVER}/satellite/find/${inputValue}`
       );
       // to see in the browser
       //  const res = JSON.stringify(result.data);
