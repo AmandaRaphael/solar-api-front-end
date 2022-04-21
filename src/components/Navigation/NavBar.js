@@ -60,7 +60,7 @@ const NavBar = () => {
           }
           to="./satellites"
         >
-          checkout satellites
+          Checkout Satellites
         </NavLink>
         <NavLink
           className={(navData) =>
